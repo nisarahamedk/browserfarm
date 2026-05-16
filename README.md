@@ -37,7 +37,7 @@ docker run --rm \
   -e BROWSERFARM_AUTH_TOKEN \
   -v "$PWD":/work \
   -w /work \
-  mcr.microsoft.com/playwright:v1.56.1-noble \
+  node:22-alpine \
   node scripts/smoke-container.mjs
 ```
 
