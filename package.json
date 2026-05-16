@@ -7,6 +7,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/server.ts",
+    "smoke:container": "docker run --rm -e BROWSERFARM_URL -e BROWSERFARM_AUTH_TOKEN -v \"$PWD\":/work -w /work mcr.microsoft.com/playwright:v1.56.1-noble node scripts/smoke-container.mjs",
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit"
   },
@@ -26,4 +27,3 @@
   },
   "packageManager": "pnpm@10.15.1"
 }
-
